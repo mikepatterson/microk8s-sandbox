@@ -1,0 +1,14 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  generation: 1
+  name: retracker
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          serviceName: retracker
+          servicePort: 8080
+        path: /

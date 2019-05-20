@@ -1,0 +1,30 @@
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: retracker
+  labels:
+    app: retracker
+spec:
+  selector:
+    matchLabels:
+      app: retracker
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: retracker
+    spec:
+      containers:
+      - name: retracker
+        image: retracker:v2
+        imagePullPolicy: "IfNotPresent"
+        ports:
+        - containerPort: 8080
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 8080
+          initialDelaySeconds: 5
+          timeoutSeconds: 30
+      restartPolicy: Always

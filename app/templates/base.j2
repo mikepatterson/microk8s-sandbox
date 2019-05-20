@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+	<title>{% block title %}{% endblock %}</title>
+  <style>
+	.center {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 200px;
+		margin-top: 20%;
+	}
+
+	canvas{
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+	}
+	</style>
+{% block external_scripts %}{% endblock %}
+</head>
+<body>
+{% block content %}{% endblock %}
+</body>
+</html>
