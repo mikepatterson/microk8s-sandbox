@@ -1,0 +1,6 @@
+.*
+docs
+mkdocs.yml
+docker-compose.yml
+test*
+*.md
