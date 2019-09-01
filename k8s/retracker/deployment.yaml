@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: retracker
-        image: retracker:v2
+        image: retracker:latest
         imagePullPolicy: "IfNotPresent"
         ports:
         - containerPort: 8080
